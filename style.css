@@ -1,0 +1,115 @@
+[class^="hover-"]{
+	background: #eee;
+	color: #fff;
+	display: inline-block;
+	padding: 1em;
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.hover-grow {
+	-webkit-transition-duration: .3s;
+	transition-duration: .3s;
+	-webkit-transiton-property: transform;
+	transition-property: transform;
+}
+
+.hover-grow:hover {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+@keyframes hover-pulse {
+	25%{
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	75%{
+		-webkit-transform: scale(.9);
+		transform: scale(.9);
+	}
+}
+
+.hover-pulse:hover {
+	-webkit-animation-name: hover-pulse;
+	animation-name: hover-pulse;
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
+	-webkit-timing-function: linear;
+	timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+@keyframes hover-push {
+	50%{
+		-webkit-transform: scale(.8);
+		transform: scale(.8);
+	}
+}
+
+.hover-push:hover {
+	-webkit-animation-name: hover-push;
+	animation-name: hover-push;
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
+	-webkit-timing-function: linear;
+	timing-function: linear;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+
+.hover-fade {
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+	-webkit-transiton-property: background-color;
+	transition-property: background-color;
+}
+
+.hover-fade:hover {
+	background-color: #666;
+}
+
+.hover-sweep {
+	position: relative;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+	-webkit-transiton-property: color;
+	transition-property: color;
+}
+
+.hover-sweep::before {
+	background: #f00;
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	-webkit-transiton-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	z-index: -1;
+}
+
+.sweep-to-right::before{
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transform-origin: 0 50%;
+	transform-origin: 0 50%;
+}
+
+.sweep-to-right:hover::before{
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+
+
+
+
